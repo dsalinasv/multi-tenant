@@ -8,6 +8,8 @@ package server.system.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,6 +27,11 @@ public class ClimDataRest {
     public Iterable<ClimData> getByYear(@PathVariable String year, 
             @RequestHeader String tenantId) {
         return repo.getByYear(year);
+    }
+    
+    @PostMapping
+    public void save(@RequestBody ClimData entity, @RequestHeader String tenantId) {
+        repo.save(entity);
     }
     
 }
