@@ -1,0 +1,11 @@
+server\util\TenantAspect.class
+server\Application.class
+server\config\SystemConfig.class
+server\system\domain\ClimData.class
+server\util\DataSourceUtil.class
+server\hibernate\CurrentTenantIdentifierResolverImpl.class
+server\system\persistence\ClimDataRepo.class
+server\util\TenantContextHolder$1.class
+server\util\TenantContextHolder.class
+server\system\service\ClimDataRest.class
+server\hibernate\DataSourceBasedMultiTenantConnectionProviderImpl.class
